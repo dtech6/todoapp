@@ -1,13 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: black;
+  color: wheat;
+  font-family: 'Montserrat', sans-serif;
+  align-items: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.todolist .header{
+  margin-top: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todolist .header .inputfield{
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  width: 25vw;
+  padding: 10px 10px;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.todolist .header input:focus{
+  outline: none;
+}
+
+.todolist .header button{
+  background-color: wheat;
+  border: none;
+  color: black;
+  border-radius: 10px;
+  padding: 12px 20px;
+  margin-left: 10px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.todolist .header .taskList{
+  margin-top: 30px;
+}
+
+.todolist .header .task{
+  align-items: center;
+  background-color: white;
+  width: 30vw;
+  color: black;
+  margin-top: 20px;
+  padding: 8px 20px;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.marked{
+  margin-top: 5vh;
+}
+
+.todolist .header .taskList .task .controls input[type="checkbox"]{
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  outline: none;
+  border: 0.15em solid black;
+  cursor: pointer;
+}
+
+input:checked {
+  background-color: wheat;
+  position: relative;
+}
+
+input:checked::before {
+  content: "\2713";
+  font-size: 1.3em;
+  color: black;
+  font-weight: 700;
+  position: absolute;
+  right: 1px;
+  top: -5px;
+}
+
+.todolist .header .taskList .task .controls{
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
